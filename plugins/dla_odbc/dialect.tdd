@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialect name='DLADialect'
+         base='MySQL41UnicodeDriverDialect'
+         class='dla_odbc'
+         version='18.1'>
+   <function-map>
+    <function group='cast' name='STR' return-type='str'>
+      <formula>DATE_FORMAT(%1, &apos;%b %e %Y %l:%i%p&apos;)</formula>
+      <argument type='datetime' />
+    </function>
+    <function group='cast' name='STR' return-type='str'>
+      <formula>DATE_FORMAT(%1, &apos;%Y-%m-%d&apos;)</formula>
+      <argument type='date' />
+    </function>
+    <function group='cast' name='INT' return-type='int'>
+      <formula>CAST(TRUNC(%1) AS BIGINT)</formula>
+      <argument type='real' />
+    </function>
+   </function-map>
+ </dialect>
+

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<connector-plugin class='dla_odbc' superclass='odbc' plugin-version='0.0.1' name='Data Lake Analytics' version='18.1'>
+  <connection-customization class="dla_odbc" enabled="true" version="10.0">
+    <vendor name="Data Lake Analytics"/>
+    <driver name="MySQL ODBC 5.3 Unicode Driver"/>
+    <customizations>
+      <customization name="CAP_QUERY_GROUP_BY_BOOL" value="true"/>
+
+      <customization name="CAP_QUERY_GROUP_BY_DEGREE" value="true"/>
+      <customization name="CAP_QUERY_SORT_BY" value="true"/>
+      <customization name="CAP_QUERY_SUBQUERIES" value="true"/>
+      <customization name="CAP_QUERY_SUBQUERIES_WITH_TOP" value="true"/>
+      <customization name="CAP_QUERY_TOP_0_METADATA" value="true"/>
+      <customization name="CAP_QUERY_TOP_N" value="true"/>
+      <customization name="CAP_QUERY_TOP_SAMPLE" value="true"/>
+      <customization name="CAP_QUERY_TOP_SAMPLE_PERCENT" value="true"/>
+
+<!--      <customization name="CAP_QUERY_WRAP_SUBQUERY_WITH_TOP" value="false"/>       -->
+      <customization name="CAP_QUERY_WRAP_SUBQUERY_WITH_TOP" value="true"/>
+      <customization name="CAP_SUPPORTS_UNION" value="true"/>
+      <customization name="CAP_TEMP_TABLES_NOT_SESSION_SCOPED" value="true"/>
+
+    </customizations>
+  </connection-customization>
+  <connection-dialog file='connection-dialog.tcd'/>
+  <connection-resolver file="connectionResolver.tdr"/>
+  <dialect file='dialect.tdd'/>
+</connector-plugin>
