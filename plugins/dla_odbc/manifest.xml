@@ -21,6 +21,10 @@
       <customization name="CAP_SUPPORTS_UNION" value="true"/>
       <customization name="CAP_TEMP_TABLES_NOT_SESSION_SCOPED" value="true"/>
 
+      <!-- Prevents hang when reading metadata for large tables -->
+      <customization name="CAP_ODBC_METADATA_SUPPRESS_SELECT_STAR" value="true"/>
+      <customization name="CAP_QUERY_WHERE_FALSE_METADATA" value="true"/>
+
     </customizations>
   </connection-customization>
   <connection-dialog file='connection-dialog.tcd'/>
