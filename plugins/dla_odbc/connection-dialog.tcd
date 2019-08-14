@@ -2,10 +2,10 @@
   <connection-config>
     <authentication-mode value='Basic' />
     <authentication-options>
-      <option name="UsernameAndPassword" default="true" />
+      <option name="UsernameAndPassword" default="true" value="Username and Password"/>
     </authentication-options>
-    <db-name-prompt value="Database: " /> 
+    <db-name-prompt value="@string/db_prompt/" /> 
     <has-pre-connect-database value="true" />
-    <port-prompt value="Port: " default="10000" />
+    <port-prompt value="@string/port_prompt/" default="10000" />
   </connection-config>
 </connection-dialog>

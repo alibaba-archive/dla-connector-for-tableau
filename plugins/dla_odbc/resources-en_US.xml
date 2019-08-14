@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="dla">Alibaba Data Lake Analytics</string>
+  <string name="db_prompt">Database:</string>
+  <string name="port_prompt">Port:</string>
+</resources>
